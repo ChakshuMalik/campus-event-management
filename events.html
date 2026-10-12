@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Events - Campus Event Management</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header>
+    <p class="site-name">Campus Event Management</p>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="events.html" class="active">Events</a>
+      <a href="register.html">Register</a>
+    </nav>
+  </header>
+
+  <main>
+    <h1>College Events</h1>
+    <p>Here is the list of events planned for this semester.</p>
+
+    <div class="card-container">
+
+      <div class="event-card" id="event1">
+        <h3>Hackathon</h3>
+        <p class="date">Date: 10 November 2026</p>
+        <p><b>Venue:</b> Computer Lab 2</p>
+        <p id="event1-desc">A 24 hour coding event where teams of three build a working project on a given theme.</p>
+      </div>
+
+      <div class="event-card" id="event2">
+        <h3>Poster Making Competition</h3>
+        <p class="date">Date: 14 November 2026</p>
+        <p><b>Venue:</b> Seminar Hall</p>
+        <p>Students make posters on the topic of cloud computing and sustainability. Materials will be provided.</p>
+      </div>
+
+      <div class="event-card" id="event3">
+        <h3>Inter-Department Quiz</h3>
+        <p class="date">Date: 21 November 2026</p>
+        <p><b>Venue:</b> Main Auditorium</p>
+        <p>General knowledge and technology quiz with teams of two from each department.</p>
+      </div>
+
+      <div class="event-card" id="event4">
+        <h3>Cloud Computing Workshop</h3>
+        <p class="date">Date: 28 November 2026</p>
+        <p><b>Venue:</b> Block B, Room 105</p>
+        <p>A hands-on session on the basics of AWS services such as EC2 and S3. Bring your own laptop.</p>
+      </div>
+
+    </div>
+
+    <h2>Suggest an Event</h2>
+    <div class="add-box">
+      <label for="event-name">Event name: </label>
+      <input type="text" id="event-name" placeholder="Enter event name">
+      <button onclick="addEvent()">Add Event</button>
+      <p id="event-message"></p>
+
+      <h3>Events you added</h3>
+      <ul id="added-events"></ul>
+    </div>
+
+    <h2>Update an Event Card</h2>
+    <p>This button changes the Hackathon card.</p>
+    <button onclick="updateEventCard()">Update Hackathon Card</button>
+  </main>
+
+  <footer>
+    Campus Event Management - CA-1 Project
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
